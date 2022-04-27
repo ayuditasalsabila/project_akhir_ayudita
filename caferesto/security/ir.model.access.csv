@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_caferesto_menu,access.caferesto.menu,model_caferesto_menu,,1,1,1,1
+access_caferesto_minuman,access.caferesto.minuman,model_caferesto_minuman,,1,1,1,1

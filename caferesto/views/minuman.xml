@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- caferesto.minuman tree view -->
+    <record id="caferesto_minuman_view_tree" model="ir.ui.view">
+        <field name="name">Menu Minuman</field>
+        <field name="model">caferesto.minuman</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="pilihan"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- caferesto.minuman action window -->
+    <record id="caferesto_minuman_action" model="ir.actions.act_window">
+        <field name="name">Daftar Minuman Caferesto</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">caferesto.minuman</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="caferesto_minuman_tea_menu_act" name="Tea" parent="caferesto_minuman_menu_categ" action="caferesto_minuman_action" sequence="10"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="caferesto_minuman_juice_menu_act" name="Juice" parent="caferesto_minuman_menu_categ" action="caferesto_minuman_action" sequence="20"/>
+
+</odoo>

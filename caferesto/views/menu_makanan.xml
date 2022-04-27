@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- caferesto.menu tree view -->
+    <record id="caferesto_menu_view_tree" model="ir.ui.view">
+        <field name="name">Menu Makanan</field>
+        <field name="model">caferesto.menu</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- caferesto.menu action window -->
+    <record id="caferesto_menu_action" model="ir.actions.act_window">
+        <field name="name">Daftar Makanan Caferesto</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">caferesto.menu</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="caferesto_makanan_maincourse_menu_act" name="Maincourse" parent="caferesto_makanan_menu_categ" action="caferesto_menu_action" sequence="10"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="caferesto_makanan_snack_menu_act" name="Snack" parent="caferesto_makanan_menu_categ" action="caferesto_menu_action" sequence="20"/>
+
+</odoo>
